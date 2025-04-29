@@ -80,7 +80,23 @@ endmodule
 
 ### Test-bench code for 4-Bit Up-Down Counter:
 
-`timescale 1ns / 1ns module counter_test; reg clk,rst,m; wire [3:0] count; initial begin clk=0; rst=0;#5; rst=1; end initial begin m=1; #160 m=0; end
+`timescale 1ns / 1ns module counter_test;
+
+reg clk,rst,m;
+
+wire [3:0] count;
+
+initial begin clk=0; 
+
+rst=0;#5;
+
+rst=1; 
+
+end initial begin m=1;
+
+#160 m=0;
+
+end
 
 counter counter1 (clk,m,rst, count);
 
